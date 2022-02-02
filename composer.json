@@ -1,0 +1,34 @@
+{
+    "name": "uzzairphpstudio/encryptable-field",
+    "description": "A laravel package to easily encrypt and decrypt model attributes",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Uzzair B.",
+            "email": "uzzairwebstudio@gmail.com",
+            "role":"Chief Technology Officer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "laravel/framework": "^6.0|^7.0|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "UzzairPhpStudio\\EncryptableField\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "UzzairPhpStudio\\EncryptableField\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "UzzairPhpStudio\\EncryptableField\\EncryptableFieldServiceProvider"
+            ]
+        }
+    }
+}
