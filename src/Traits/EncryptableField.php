@@ -5,6 +5,7 @@ namespace UzzairPhpStudio\EncryptableField\Traits;
 use Exception;
 use Illuminate\Contracts\Encryption\EncryptException;
 use Illuminate\Support\Facades\Crypt;
+use UzzairPhpStudio\EncryptableField\Eloquent\Builder as EncryptableFieldEloquentBuilder;
 
 trait EncryptableField
 {
@@ -97,5 +98,11 @@ trait EncryptableField
           }
         }
         return $attributes;
+    }
+
+
+    public function newEloquentBuilder($query)
+    {
+        return new EncryptableFieldEloquentBuilder($query);
     }
 }
